@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple Chat App</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  </head>
+  <body>
+       <div class="container-fluid">
+       <h1 align="center" style="color: blue;">Hi {% if current_user.is_authenticated %}{{ current_user.username }}{% else %}Guest{% endif %}!</h1>
+       </div> 
+       <div class="well text-center">
+         <form action="/chat">
+           <div>
+             <label>Enter your username:</label>
+             <input type="text" name="username">
+           </div>
+           <div>
+             <label>Enter room id:</label>
+             <input type="text" name="room">
+          </div>
+          <button type="submit" class="btn btn-primary">Join Room<span class="glyphicon glyphicon glyphicon-hand-up"></span></button>
+        </form>
+      </div>  
+  </body>
+</html>
