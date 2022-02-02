@@ -1,2 +1,2 @@
 # ChatApp
- Simple Chat App Written with Pyton
+ Simple Chat App Written with Flask
